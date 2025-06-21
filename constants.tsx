@@ -289,14 +289,4 @@ export const COMPANY_NAME = "WebCreationPros";
 export const TAGLINE = "Launch. Elevate. Dominate.";
 export const CONTACT_EMAIL = "info@webcreationpros.com";
 
-// Re-export all icons defined in this file for clarity
-export {
-    // BrandComponentsIcon, GearIcon, BotHeadIcon, ChatBotIcon, SeoIcon, WebDevIcon, GrowthChartIcon, AppDevIcon,
-    // ConsultationIcon, ProposalIcon, ArrowsPathIcon, CodeBracketSquareIcon, DeploymentIcon, SupportIcon,
-    // MailIcon, LinkedInIcon, InstagramIcon, CheckCircleIcon, ChevronDownIcon
-    // Keeping previously defined icons:
-    BrandComponentsIcon, GearIcon, BotHeadIcon, ChatBotIcon, SeoIcon, WebDevIcon, GrowthChartIcon, AppDevIcon,
-    ConsultationIcon, ProposalIcon, ArrowsPathIcon, CodeBracketSquareIcon, DeploymentIcon, SupportIcon,
-    MailIcon, LinkedInIcon, InstagramIcon, CheckCircleIcon, ChevronDownIcon,
-    StarterPlanIcon, GrowthPlanIcon, PremiumPlanIcon
-};
+// Removed the duplicate export block
