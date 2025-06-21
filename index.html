@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" /> <!-- Placeholder icon, replace with actual favicon -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WebCreationPros | Launch. Elevate. Dominate.</title>
+  <meta name="description" content="Explore WebCreationPros — premium design, development, and AI services transforming businesses with smart, modern digital solutions.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    // Tailwind custom configuration
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'neon-blue': '#2C79FF',
+            'cyber-purple': '#8133FF',
+            'charcoal': '#111111',
+            'soft-white': '#FAFAFA',
+            'electric-green': '#33FF88',
+            'brand-primary': '#2C79FF',
+            'brand-secondary': '#8133FF',
+            'brand-accent': '#33FF88',
+            'brand-bg-dark': '#111111',
+            'brand-bg-light': '#1A1A1A', // Slightly lighter dark for cards
+            'brand-text-light': '#FAFAFA',
+            'brand-text-medium': '#A0A0A0',
+            'brand-text-dark': '#111111',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          backgroundSize: {
+            'auto': 'auto',
+            'cover': 'cover',
+            'contain': 'contain',
+            '200%': '200% auto', // Custom size for gradient animation
+            '300%': '300% 100%', // For scanner line
+          },
+          animation: {
+            'bounce-slow': 'bounce 3s infinite',
+            'pulse-glow-border': 'pulse-glow-border 2.5s infinite ease-in-out',
+            'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
+            'fade-in': 'fade-in 0.8s ease-out forwards',
+            'button-ripple': 'button-ripple 0.6s linear',
+            'text-gradient-flow': 'text-gradient-flow 5s ease infinite',
+            'float': 'float 4s ease-in-out infinite',
+            'fadeInOut': 'fadeInOut 10s infinite alternate', // For background grid
+            'shooting-line': 'shooting-line 6s ease-out infinite',
+            'graphic-pulse': 'graphic-pulse 3s ease-in-out infinite alternate',
+            'particle-drift': 'particle-drift 8s ease-in-out infinite alternate',
+            'breathing-glow': 'breathing-glow 3.5s infinite ease-in-out',
+            'slide-in-left-fade': 'slide-in-left-fade 0.7s ease-out forwards',
+            'subtle-drift-rotate': 'subtle-drift-rotate 15s infinite linear alternate',
+            'scanner-line': 'scanner-line 4s linear infinite',
+            'orbiting-element': 'orbiting-element 10s linear infinite',
+            'icon-particle-pulse': 'icon-particle-pulse 2s infinite ease-in-out',
+            // New animations for Process Page
+            'parallax-bg-element-float': 'parallax-bg-element-float 25s infinite ease-in-out alternate',
+            'timeline-pulse': 'timeline-pulse 1.5s infinite ease-in-out',
+            'subtle-icon-bob': 'subtle-icon-bob 3s infinite ease-in-out',
+          },
+          keyframes: {
+            'pulse-glow-border': {
+              '0%, 100%': { borderColor: 'rgba(44, 121, 255, 0.7)', boxShadow: '0 0 5px rgba(44, 121, 255, 0.5), 0 0 10px rgba(44, 121, 255, 0.3)' },
+              '50%': { borderColor: 'rgba(129, 51, 255, 0.7)', boxShadow: '0 0 15px rgba(129, 51, 255, 0.5), 0 0 25px rgba(129, 51, 255, 0.3)' },
+            },
+            'fade-in-up': {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0px)' },
+            },
+            'fade-in': {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            'button-ripple': {
+              'to': { transform: 'scale(4)', opacity: '0' }
+            },
+            'text-gradient-flow': {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+            },
+            'float': {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-15px)' },
+            },
+            'fadeInOut': {
+              '0%': { opacity: '0.05' },
+              '50%': { opacity: '0.15' },
+              '100%': { opacity: '0.05' },
+            },
+            'shooting-line': {
+              '0%': { transform: 'translateX(-150%) scaleX(0.3) rotate(-30deg)', opacity: '0' },
+              '20%': { opacity: '0.7', transform: 'translateX(-50%) scaleX(0.7) rotate(-30deg)' },
+              '80%': { opacity: '0.7', transform: 'translateX(50%) scaleX(0.7) rotate(-30deg)' },
+              '100%': { transform: 'translateX(150%) scaleX(0.3) rotate(-30deg)', opacity: '0' },
+            },
+            'graphic-pulse': { 
+              '0%': { transform: 'scale(1)', opacity: '0.3' },
+              '100%': { transform: 'scale(1.05)', opacity: '0.6' },
+            },
+            'particle-drift': { 
+              '0%': { opacity: '0.1', transform: 'translate(0, 0) scale(0.8)' },
+              '50%': { opacity: '0.4', transform: 'translate(var(--drift-x, 5px), var(--drift-y, -5px)) scale(1)' },
+              '100%': { opacity: '0.1', transform: 'translate(0,0) scale(0.8)' },
+            },
+            'breathing-glow': {
+              '0%, 100%': { transform: 'scale(1)', boxShadow: '0 0 10px rgba(44, 121, 255, 0.2), 0 0 5px rgba(44, 121, 255, 0.1)' },
+              '50%': { transform: 'scale(1.03)', boxShadow: '0 0 20px rgba(44, 121, 255, 0.4), 0 0 10px rgba(44, 121, 255, 0.2)' },
+            },
+            'slide-in-left-fade': {
+              '0%': { opacity: '0', transform: 'translateX(-25px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            'subtle-drift-rotate': {
+              '0%': { transform: 'translate(0px, 0px) rotate(0deg)', opacity: '0.05' },
+              '25%': { transform: 'translate(var(--drift-blob-x1, 8px), var(--drift-blob-y1, -10px)) rotate(var(--drift-blob-r1, 10deg))', opacity: '0.1' },
+              '50%': { transform: 'translate(var(--drift-blob-x2, -8px), var(--drift-blob-y2, 10px)) rotate(var(--drift-blob-r2, -10deg))', opacity: '0.15' },
+              '75%': { transform: 'translate(var(--drift-blob-x1, 5px), var(--drift-blob-y1, 5px)) rotate(var(--drift-blob-r1, 5deg))', opacity: '0.1' },
+              '100%': { transform: 'translate(0px, 0px) rotate(0deg)', opacity: '0.05' },
+            },
+            'scanner-line': {
+              '0%': { backgroundPosition: '-200% 0' }, 
+              '100%': { backgroundPosition: '200% 0' }, 
+            },
+            'orbiting-element': {
+              '0%': { transform: 'rotate(0deg) translateX(var(--orbit-radius, 20px)) rotate(0deg) scale(0.9)', opacity: '0.6' },
+              '100%': { transform: 'rotate(360deg) translateX(var(--orbit-radius, 20px)) rotate(-360deg) scale(1.1)', opacity: '0.6' },
+            },
+            'icon-particle-pulse': {
+              '0%, 100%': { transform: 'scale(0.8)', opacity: '0.5' },
+              '50%': { transform: 'scale(1.2)', opacity: '1' },
+            },
+            // Keyframes for Process Page
+            'parallax-bg-element-float': {
+              '0%': { transform: 'translate(var(--px-start-x, 0px), var(--px-start-y, 0px)) rotate(var(--px-start-r, 0deg)) scale(var(--px-start-s, 1))', opacity: 'var(--px-start-o, 0.1)' },
+              '100%': { transform: 'translate(var(--px-end-x, 20px), var(--px-end-y, -30px)) rotate(var(--px-end-r, 15deg)) scale(var(--px-end-s, 1.05))', opacity: 'var(--px-end-o, 0.05)' },
+            },
+            'timeline-pulse': {
+              '0%, 100%': { transform: 'scale(0.9)', opacity: '0.7' },
+              '50%': { transform: 'scale(1.1)', opacity: '1' },
+            },
+            'subtle-icon-bob': {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-6px)' },
+            }
+          }
+        }
+      },
+      plugins: [],
+    }
+  </script>
+  <style>
+    /* For custom scrollbar styling if desired */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1a1a1a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2C79FF;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #8133FF;
+    }
+    /* For AnimatedText (typewriter) */
+    .typewriter-char {
+      display: inline-block;
+      opacity: 0;
+      animation: char-appear 0.1s forwards;
+    }
+    @keyframes char-appear {
+      to { opacity: 1; }
+    }
+    /* Floating label for forms */
+    .floating-label-input:focus ~ label,
+    .floating-label-input:not(:placeholder-shown) ~ label {
+      @apply transform -translate-y-5 scale-75 text-neon-blue;
+    }
+    .floating-label-input:focus ~ label {
+      @apply text-neon-blue;
+    }
+
+    /* CSS class for text gradient animation */
+    .animate-text-gradient-flow {
+        background-size: 200% auto !important;
+    }
+    /* Style for drawing SVG lines */
+    .svg-draw-path {
+        stroke-dasharray: 1; /* Default, will be overridden by JS */
+        stroke-dashoffset: 1; /* Default, will be overridden by JS */
+    }
+    /* .timeline-path-animate class removed as animation is JS driven */
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.6.2",
+    "react-lottie-player": "https://esm.sh/react-lottie-player"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-brand-bg-dark text-brand-text-light font-sans antialiased">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
