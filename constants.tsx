@@ -288,5 +288,3 @@ export const SOCIAL_LINKS_DATA: SocialLinkInfo[] = [
 export const COMPANY_NAME = "WebCreationPros";
 export const TAGLINE = "Launch. Elevate. Dominate.";
 export const CONTACT_EMAIL = "info@webcreationpros.com";
-
-// Removed the duplicate export block
