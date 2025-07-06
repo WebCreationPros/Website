@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { PROCESS_STEPS_DATA } from '../constants';
 import { ProcessStepInfo } from '../types';
@@ -33,8 +32,8 @@ const ProcessStepCard: React.FC<ProcessStepCardProps> = ({ step, index, isLast }
                    mt-[-30px] pt-[45px] z-10 
                    transition-all duration-300 group-hover:shadow-[0_0_30px_theme(colors.neon-blue/40)]"
       >
-        <h4 className="text-xl font-semibold text-brand-text-light mb-2 transition-colors duration-300 group-hover:text-neon-blue">{step.title}</h4>
-        <p className="text-brand-text-medium text-sm min-h-[60px] lg:min-h-[75px] transition-colors duration-300 group-hover:text-brand-text-light">{step.description}</p>
+        <h4 className="text-xl font-semibold text-brand-text-light transition-colors duration-300 group-hover:text-neon-blue">{step.title}</h4>
+        <p className="text-brand-text-medium text-sm overflow-hidden transition-all duration-300 ease-in-out max-h-0 opacity-0 group-hover:mt-2 group-hover:max-h-40 group-hover:opacity-100 group-hover:text-brand-text-light">{step.description}</p>
       </div>
 
       {/* Mobile Connector - Placed *inside* the card's main div for mobile layout */}
