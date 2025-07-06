@@ -136,9 +136,10 @@ export const TiktokIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 export const ThreadsIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
-    <path d="M12 4.72a7.28 7.28 0 0 0-7.28 7.28c0 3.75 2.85 6.84 6.54 7.23v-2.15A5.08 5.08 0 0 1 7.17 12a4.72 4.72 0 0 1 4.72-4.72A4.82 4.82 0 0 1 16.6 12h-2.2v2.24h4.88v-2.2c0-4.01-3.27-7.28-7.28-7.28Z"/>
+    <path fillRule="evenodd" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18a8 8 0 1 1 0-16 7.9 7.9 0 0 1 4.94 1.76l-1.42 1.42A6 6 0 0 0 6 12a5.9 5.9 0 0 0 3.51 5.45l-1.23 1.23A8 8 0 0 1 4 12a8 8 0 0 1 16 0c0 1.25-.29 2.44-.82 3.51l-1.23-1.23A5.94 5.94 0 0 0 18 12a6 6 0 0 0-9.68-4.94l1.42-1.42A7.9 7.9 0 0 1 20 12a8 8 0 0 1-8 8Z" clipRule="evenodd"/>
   </svg>
 );
+
 
 
 export const CheckCircleIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
