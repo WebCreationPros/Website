@@ -1,12 +1,12 @@
 import React, { useEffect } from 'react';
-import { HashRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import ServicesPage from './pages/ServicesPage';
 import ProcessPage from './pages/ProcessPage'; 
 import PackagesPage from './pages/PackagesPage';
-import ContactPage from './pages/ContactPage'; // Import the new ContactPage
+import ContactPage from './pages/ContactPage'; 
 import PlaceholderPage from './pages/PlaceholderPage'; 
 
 // Helper component to scroll to top on route change
@@ -22,7 +22,7 @@ const ScrollToTop: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Navbar />
@@ -39,7 +39,7 @@ const App: React.FC = () => {
         </main>
         <Footer />
       </div>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
